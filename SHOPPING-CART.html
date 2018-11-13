@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title> SHOPPING CART </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="SHOPPING-CART.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1">Let's LEGO</span>
+    </nav>
+    <div class="input-group mb-3 total-bag">
+      <div class="input-group-prepend">
+        <span class="input-group-text totalprice">Shopping Bag Total</span>
+        <span class="input-group-text" id="bagtotalprice">0.00 $</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="card" style="width: 18rem;" id="Mario">
+      <button class="removeBttn" onclick="MarioRemove ()">X</button>
+      <img class="card-img-top" src="Mario.jpg" alt="">
+      <div class="card-body">
+        <h5 class="card-title"> Super Mario</h5> 
+        <p class="card-text"> Build your super Mario hero ! <br> <br>
+                             It measures over 10 cm high , 4 cm long and 7 cm wide 
+        </p>
+        </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">522 pieces - For boys and girls between the ages of 9 and 14 years old</li>
+            <li class="list-group-item" id="marioprice">Price  49 $  </li> 
+            <li  class="list-group-item" id="mariototalprice"> Total Price :  0.00 $  </li> 
+          </ul>
+        <center> <div class="card-body">
+           <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <button type="button" class="btn btn-outline-success" id="marioplus" onclick="MarioCounterPlus(),MairoTotalPrice(),TotalPrice()"> + </button> 
+            <h3 type="text" class="btn btn-outline-secondary" id="mariocounter"> 0 </h3>
+            <button type="button" class="btn btn-outline-danger" id="mariomoins" onclick="MarioCounterMinus(),MairoTotalPrice(),TotalPrice()"> - </button> 
+          </div> 
+        </div> </center>
+    </div>
+      <div class="card" style="width: 18rem;" id="Nurse">
+        <button class="removeBttn" onclick="NurseRemove ()">X</button>
+        <img class="card-img-top" src="Nurse.jpg" alt="">
+        <div class="card-body">
+           <h5 class="card-title"> Nurse </h5> 
+          <p class="card-text"> Build your Nurse friend ! <br> <br>
+                                It measures over 8 cm high , 3 cm long and 6 cm wide 
+          </p>
+          </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"> 498 pieces - For boys and girls between the ages of 9 and 14 years old</li>
+               <li class="list-group-item" id="nurseprice" >Price  45 $  </li> 
+                <li class="list-group-item" id="nursetotalprice">Total Price :  0.00 $   </li> 
+
+            </ul>
+          <center> <div class="card-body">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <button type="button" class="btn btn-outline-success" id="nurseplus" onclick="NurseCounterPlus(),NurseTotalPrice(),TotalPrice()"> + </button> 
+              <h3 class="btn btn-outline-secondary" id="nursecounter"> 0 </h3>
+              <button type="button" class="btn btn-outline-danger" id="nursemoins" onclick="NurseCounterMinus(),NurseTotalPrice(),TotalPrice()"> - </button> 
+            </div> 
+          </div> </center>
+      </div>
+      <div class="card" style="width: 18rem;" id="Police">
+        <button class="removeBttn" onclick="PoliceRemove ()">X</button>
+        <center> <img class="card-img-top police" src="Police.png" alt=""> </center>
+        <div class="card-body">
+           <h5 class="card-title"> Policeman</h5> 
+          <p class="card-text"> Build your Policeman ! <br> <br>
+                                It measures over 12 cm high , 6 cm long and 9 cm wide 
+          </p>
+          </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">522 pieces - For boys and girls between the ages of 9 and 14 years old</li>
+               <li class="list-group-item" id="policeprice">Price  42 $  </li> 
+                <li class="list-group-item" id="policetotalprice">Total Price :  0.00 $   </li> 
+
+            </ul>
+          <center> <div class="card-body">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <button type="button" class="btn btn-outline-success" id="policeplus" onclick="PoliceCounterPlus(),PoliceTotalPrice(),TotalPrice()"> + </button> 
+              <h3 class="btn btn-outline-secondary " id="policecounter"> 0 </h3>
+              <button type="button" class="btn btn-outline-danger" id="policemoins" onclick="PoliceCounterMinus(),PoliceTotalPrice(),TotalPrice()"> - </button> 
+            </div> 
+          </div> </center>
+      </div>
+    </main> 
+    <footer>
+
+    </footer>
+    <script src='SHOPPING-CART.js'> </script>        
+</body>
+</html>

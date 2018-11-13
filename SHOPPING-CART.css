@@ -1,0 +1,17 @@
+
+header {
+    display: flex;
+}
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+.police{
+    width: 54%;
+}
+.btn btn-secondary btn-sm{
+    text-align: center;
+}
+.removeBttn{
+width: 10%;
+}
